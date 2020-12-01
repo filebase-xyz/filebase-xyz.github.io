@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<title>Депозитный калькулятор</title>
+	
+  </head>
+  <body>
+   
+	<div class="container mt-5">
+		
+		<h1 class="mb-4">Депозитный калькулятор</h1>
+	
+		<!-- Input Data Form -->
+		<div class='row row-cols-1 row-cols-lg-4 my-4'>
+			<div class="form-group">
+			  <label for="sumInput">Сумма вклада (грн.)</label>
+			  <input type="number" class="form-control" id="sumInput" min="1000" max="999999999" value="10000">
+			</div>
+
+			<div class="form-group">
+			  <label for="termInput">Срок вклада (мес.)</label>
+			  <input type="number" class="form-control" id="termInput" min="1" max="1200" value="12">
+			</div> 
+
+			<div class="form-group">
+			  <label for="rateInput">Ставка (% годовых)</label>
+			  <input type="number" class="form-control" id="rateInput" min="1" max="1000" value="12.00" step='0.01'>
+			</div>
+
+			<div class="form-group">
+				<label for="capInput">Капитализация %</label>
+				<input class='d-block mt-1' style='width:32px;height:32px;' type="checkbox" id="capInput">	
+			</div>
+
+		</div>
+		  
+		  <button class="btn btn-primary w-100">Рассчитать</button>
+		
+		<!-- /Input Data Form -->
+				
+		<h3 class='my-4'>По завершению депозита вы получите: <output id="resultPlace">-</output> грн.</h3>
+
+	</div>
+   
+  </body>
+</html>
