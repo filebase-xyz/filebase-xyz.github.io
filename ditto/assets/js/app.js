@@ -1,5 +1,5 @@
 
-    import {createApp} from "../../node_modules/vue/dist/vue.esm-browser.js";
+    import {createApp} from "../../node_modules/vue/dist/vue.esm-browser.prod.js";
 
 
     function camelCase(str) {
@@ -64,6 +64,7 @@
             getList(){
 
                 let s = this.searchText.trim().toLowerCase();
+
                 return this.list.filter(item => {
 
                     const searchFields = ['symbol', 'description'];
@@ -89,6 +90,8 @@
                 data = await data.text();
 
                 data = csvToObject(data);
+
+                data = data.map((item, i) => ({...item, id: i}));
 
                 this.list = data;
 

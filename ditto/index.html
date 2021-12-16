@@ -46,7 +46,7 @@
             </thead>
             <tbody>
 
-              <tr v-for='item in getListAfterFilter'>
+              <tr v-for='item in getListAfterFilter' :key='item.id' >
                 <td>{{item.symbol}}</td>
                 <td>{{item.description}}</td>
                 <td>{{item.type}}</td>
